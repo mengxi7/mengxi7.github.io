@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>黄洋</title>
+  <meta name="description" content="黄洋 - 中国科学院自动化研究所博士在读，研究机器学习、强化学习、最优传输、随机控制与组合优化。">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="page">
+    <header class="hero">
+      <div>
+        <h1>黄洋 <span class="han-name">Yang Huang</span></h1>
+        <p class="subtitle">博士在读 · 机器学习与组合优化</p>
+        <p class="affiliation">中国科学院自动化研究所，复杂系统认知与决策国家级重点实验室</p>
+      </div>
+      <nav class="links" aria-label="个人链接">
+        <a href="mailto:huangyang22@mails.ucas.ac.cn">邮箱</a>
+        <a href="https://github.com/mengxi7">GitHub</a>
+        <a href="Yang_Huang_CV_zh.pdf">中文简历</a>
+        <a href="#publications">论文</a>
+        <a href="#projects">项目</a>
+        <a href="index.html">English</a>
+      </nav>
+    </header>
+
+    <section id="about">
+      <h2>个人简介</h2>
+      <p>
+        我是中国科学院自动化研究所博士在读，研究方向包括生成模型、强化学习与离散优化。
+        我的工作主要关注如何将图神经网络、最优传输、随机控制、连续松弛和局部搜索结合起来，
+        为 Maximum Independent Set、Maximum Cut、Maximum Clique 等 NP-hard 图组合优化问题构建高效的学习型求解器。
+      </p>
+      <p>
+        我对“从预测走向优化”的 AI 方法特别感兴趣，希望构建既有优化理论支撑、又能在大规模实例上高效推理和可靠评测的神经优化系统。
+      </p>
+    </section>
+
+    <section id="research">
+      <h2>研究兴趣</h2>
+      <div class="tags">
+        <span>机器学习求解组合优化</span>
+        <span>图神经网络</span>
+        <span>强化学习</span>
+        <span>QUBO Optimization</span>
+        <span>最优传输</span>
+        <span>随机控制</span>
+        <span>局部搜索</span>
+        <span>Sinkhorn Projection</span>
+      </div>
+    </section>
+
+    <section id="publications">
+      <h2>论文</h2>
+      <article class="pub">
+        <h3>Optimal Transport-Guided Stochastic Control for Graph Combinatorial Optimization</h3>
+        <p class="authors"><strong>Yang Huang</strong>, Yifan Zhang, Jian Cheng</p>
+        <p class="venue">International Conference on Machine Learning (ICML), 2026 · Regular</p>
+        <p>
+          该工作将 MIS、MaxCut、MaxClique 统一为多线性 QUBO 问题，并证明连续松弛无最优值松弛间隙且存在二进制最优解。
+          在此基础上，从熵正则最优传输 / Schrödinger bridge 视角推导面向低能量解分布的受控扩散框架，
+          用 Laplace 近似和 GNN 摊还学习可扩展的最优控制 drift。
+        </p>
+        <p class="status">
+          <a href="https://github.com/mengxi7/Optimal-Transport-Guided-Stochastic-Control-for-Graph-Combinatorial-Optimization">代码与论文</a>
+        </p>
+      </article>
+
+      <article class="pub">
+        <h3>Learning to Destroy and Repair Local Optima in Multilinear Graph QUBO Optimization</h3>
+        <p class="authors"><strong>Yang Huang</strong></p>
+        <p class="venue">Transactions on Machine Learning Research (TMLR) · Under Review</p>
+        <p>
+          该工作针对多线性 QUBO 非凸景观中的次优局部最优，设计学习型 Destroy-and-Repair 测试时搜索框架。
+          Repair network 从随机或受损连续状态出发最小化原始 relaxed QUBO energy；destroy policy 学习状态相关的破坏强度，
+          通过先破坏当前局部结构、再神经修复来帮助求解器跳出局部最优。
+        </p>
+        <p class="status">
+          <a href="https://github.com/mengxi7/learned-destroy-repair">代码与论文</a>
+        </p>
+      </article>
+    </section>
+
+    <section id="projects">
+      <h2>代表项目</h2>
+      <article class="project">
+        <h3>基于 OT 与随机控制的图组合优化框架</h3>
+        <ul>
+          <li>将 MIS、MaxCut、MaxClique 统一建模为多线性 QUBO，并在连续域保持原问题最优解结构。</li>
+          <li>从熵正则 OT / Schrödinger bridge 推导受控扩散采样，使粒子显式朝低能量解区域移动。</li>
+          <li>用 Laplace 近似将高维条件期望转化为 proximal energy-minimization 子问题，并由 GNN 摊还求解。</li>
+          <li>在 RB、ER、BA 图分布上验证了解质量和推理效率。</li>
+        </ul>
+      </article>
+
+      <article class="project">
+        <h3>面向多线性 QUBO 的 Learned Destroy and Repair</h3>
+        <ul>
+          <li>设计 recurrent repair network，以原始 relaxed QUBO objective 训练神经能量优化器。</li>
+          <li>设计 destroy policy，根据图结构、当前状态和搜索步数预测破坏强度。</li>
+          <li>使用 policy gradient 和 decoded-score improvement 训练测试时扰动策略。</li>
+          <li>在相同 repair-call 预算下，相比 repair-only 提升 MIS 和 MaxCut 解质量。</li>
+        </ul>
+      </article>
+
+      <article class="project">
+        <h3>面向 ATSP 的 Relational Attention Learned Optimizer</h3>
+        <ul>
+          <li>将 Asymmetric TSP 表示为 city-position assignment-QUBO，合法 tour 对应 permutation matrix。</li>
+          <li>显式建模 forward transition、backward transition、same-city、same-position 四类关系。</li>
+          <li>结合 relaxed ATSP objective、row/column constraint penalty、binary regularization 与 Sinkhorn projection 训练 soft assignment refinement。</li>
+          <li>探索 two-stage untied unrolled optimizer，将粗构造和局部改进拆分为两个不同阶段。</li>
+        </ul>
+      </article>
+    </section>
+
+    <section id="education">
+      <h2>教育背景</h2>
+      <div class="edu">
+        <p><strong>中国科学院自动化研究所</strong> · 硕博连读，博士在读，2022 至今</p>
+        <p><strong>北京科技大学</strong> · 数学与应用数学，理学学士，2018-2022</p>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>联系方式</h2>
+      <p>
+        邮箱：<a href="mailto:huangyang22@mails.ucas.ac.cn">huangyang22@mails.ucas.ac.cn</a>
+      </p>
+      <p>
+        代码：<a href="https://github.com/mengxi7">github.com/mengxi7</a>
+      </p>
+    </section>
+  </main>
+</body>
+</html>

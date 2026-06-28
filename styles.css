@@ -50,6 +50,14 @@ h1 {
   letter-spacing: 0;
 }
 
+.han-name {
+  display: inline-block;
+  margin-left: 8px;
+  color: var(--muted);
+  font-size: 28px;
+  font-weight: 600;
+}
+
 .subtitle {
   margin: 10px 0 4px;
   font-size: 18px;
@@ -57,9 +65,18 @@ h1 {
   font-weight: 650;
 }
 
+.subtitle.zh {
+  margin-top: 2px;
+  font-size: 16px;
+}
+
 .affiliation {
   margin: 0;
   color: var(--muted);
+}
+
+.affiliation.zh {
+  margin-top: 2px;
 }
 
 .links {
@@ -99,6 +116,10 @@ h3 {
 
 p {
   margin: 0 0 10px;
+}
+
+p[lang="zh-CN"] {
+  color: #26364f;
 }
 
 .tags {
@@ -166,5 +187,12 @@ ul {
   .links {
     justify-content: flex-start;
     margin-top: 18px;
+  }
+
+  .han-name {
+    display: block;
+    margin-left: 0;
+    margin-top: 4px;
+    font-size: 24px;
   }
 }
