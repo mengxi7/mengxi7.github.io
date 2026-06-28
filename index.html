@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Yang Huang</title>
+  <meta name="description" content="Yang Huang - PhD candidate working on machine learning for combinatorial optimization, graph neural networks, reinforcement learning, optimal transport, and stochastic control.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="page">
+    <header class="hero">
+      <div>
+        <h1>Yang Huang</h1>
+        <p class="subtitle">PhD Candidate · Machine Learning for Combinatorial Optimization</p>
+        <p class="affiliation">Institute of Automation, Chinese Academy of Sciences</p>
+      </div>
+      <nav class="links" aria-label="Profile links">
+        <a href="mailto:huangyang22@mails.ucas.ac.cn">Email</a>
+        <a href="https://github.com/mengxi7">GitHub</a>
+        <a href="Yang_Huang_CV.pdf">CV</a>
+        <a href="#publications">Publications</a>
+        <a href="#projects">Projects</a>
+      </nav>
+    </header>
+
+    <section id="about">
+      <h2>About</h2>
+      <p>
+        I am a PhD candidate at the Institute of Automation, Chinese Academy of Sciences,
+        working on machine learning methods for graph combinatorial optimization.
+        My current research focuses on graph neural networks, reinforcement learning,
+        continuous relaxations, optimal transport, stochastic control, and local search for
+        NP-hard graph optimization problems such as Maximum Independent Set, Maximum Cut,
+        and Maximum Clique.
+      </p>
+      <p>
+        I am interested in building learning-based optimizers that combine principled
+        optimization formulations with scalable neural inference and robust empirical evaluation.
+      </p>
+    </section>
+
+    <section id="research">
+      <h2>Research Interests</h2>
+      <div class="tags">
+        <span>Machine Learning for Combinatorial Optimization</span>
+        <span>Graph Neural Networks</span>
+        <span>Reinforcement Learning</span>
+        <span>QUBO Optimization</span>
+        <span>Optimal Transport</span>
+        <span>Stochastic Control</span>
+        <span>Local Search</span>
+      </div>
+    </section>
+
+    <section id="publications">
+      <h2>Publications</h2>
+      <article class="pub">
+        <h3>Optimal Transport–Guided Stochastic Control for Graph Combinatorial Optimization</h3>
+        <p class="authors"><strong>Yang Huang</strong>, Yifan Zhang, Jian Cheng</p>
+        <p class="venue">International Conference on Machine Learning (ICML), 2026 · Regular</p>
+        <p>
+          We formulate graph combinatorial optimization problems as QUBO objectives, keep the
+          exact multilinear relaxation over the continuous domain, and derive an OT-guided
+          stochastic control framework for sampling low-energy solutions with GNN-amortized control.
+        </p>
+        <p class="status">
+          <a href="https://github.com/mengxi7/Optimal-Transport-Guided-Stochastic-Control-for-Graph-Combinatorial-Optimization">Code and paper</a>
+        </p>
+      </article>
+
+      <article class="pub">
+        <h3>Learning to Destroy and Repair Local Optima in Multilinear Graph QUBO Optimization</h3>
+        <p class="authors"><strong>Yang Huang</strong></p>
+        <p class="venue">Transactions on Machine Learning Research (TMLR) · Under Review</p>
+        <p>
+          We propose a learned destroy-and-repair framework for improving local optima in
+          multilinear graph QUBO optimization. A recurrent repair network optimizes the relaxed
+          QUBO energy, while a destroy policy learns a state-dependent destruction rate from
+          post-repair discrete-score improvements.
+        </p>
+        <p class="status">
+          <a href="https://github.com/mengxi7/learned-destroy-repair">Code and paper</a>
+        </p>
+      </article>
+    </section>
+
+    <section id="projects">
+      <h2>Selected Projects</h2>
+      <article class="project">
+        <h3>OT-Guided Stochastic Control for Graph Optimization</h3>
+        <ul>
+          <li>Unified MIS, MaxCut, and MaxClique as QUBO objectives with exact multilinear relaxations.</li>
+          <li>Derived controlled diffusion dynamics from an entropic OT / Schrödinger bridge perspective.</li>
+          <li>Used Laplace approximation and GNN amortization to obtain scalable control policies.</li>
+          <li>Evaluated on RB, ER, and BA graph distributions with competitive solution quality.</li>
+        </ul>
+      </article>
+
+      <article class="project">
+        <h3>Learned Destroy and Repair for Multilinear QUBO</h3>
+        <ul>
+          <li>Designed a recurrent repair network trained by the original multilinear QUBO objective.</li>
+          <li>Trained a destroy policy with graph-level improvement rewards using policy gradients.</li>
+          <li>Used rate-matched random masks to reduce unreliable node-level credit assignment.</li>
+          <li>Improved repair-only inference on MIS and MaxCut under matched repair-call budgets.</li>
+        </ul>
+      </article>
+
+      <article class="project">
+        <h3>Relational Attention Learned Optimizer for ATSP</h3>
+        <ul>
+          <li>Formulated asymmetric TSP as a city-position assignment QUBO over permutation matrices.</li>
+          <li>Designed relational attention over forward, backward, same-city, and same-position relations.</li>
+          <li>Combined relaxed ATSP objectives, row/column penalties, binary regularization, and Sinkhorn projection.</li>
+          <li>Exploring two-stage untied unrolled optimizers for construction and refinement.</li>
+        </ul>
+      </article>
+    </section>
+
+    <section id="education">
+      <h2>Education</h2>
+      <div class="edu">
+        <p><strong>Institute of Automation, Chinese Academy of Sciences</strong> · PhD candidate, direct PhD track, 2022–present</p>
+        <p><strong>University of Science and Technology Beijing</strong> · B.Sc. in Mathematics and Applied Mathematics, 2018–2022</p>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>
+        Email: <a href="mailto:huangyang22@mails.ucas.ac.cn">huangyang22@mails.ucas.ac.cn</a>
+      </p>
+      <p>
+        Code: <a href="https://github.com/mengxi7">github.com/mengxi7</a>
+      </p>
+    </section>
+  </main>
+</body>
+</html>

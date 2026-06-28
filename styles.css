@@ -1,0 +1,170 @@
+:root {
+  --text: #172033;
+  --muted: #5d687a;
+  --accent: #14528c;
+  --line: #d8e0ea;
+  --bg: #f7f9fc;
+  --card: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  color: var(--text);
+  background: var(--bg);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, "Noto Sans", sans-serif;
+  line-height: 1.6;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.page {
+  width: min(980px, calc(100% - 40px));
+  margin: 0 auto;
+  padding: 42px 0 64px;
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  gap: 28px;
+  align-items: flex-start;
+  padding-bottom: 22px;
+  border-bottom: 1px solid var(--line);
+}
+
+h1 {
+  margin: 0;
+  font-size: 42px;
+  line-height: 1.1;
+  letter-spacing: 0;
+}
+
+.subtitle {
+  margin: 10px 0 4px;
+  font-size: 18px;
+  color: var(--accent);
+  font-weight: 650;
+}
+
+.affiliation {
+  margin: 0;
+  color: var(--muted);
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 10px;
+  max-width: 360px;
+}
+
+.links a {
+  padding: 6px 10px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--card);
+  font-size: 14px;
+}
+
+section {
+  margin-top: 30px;
+}
+
+h2 {
+  margin: 0 0 14px;
+  font-size: 22px;
+  color: var(--accent);
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 6px;
+  letter-spacing: 0;
+}
+
+h3 {
+  margin: 0 0 6px;
+  font-size: 18px;
+  line-height: 1.35;
+}
+
+p {
+  margin: 0 0 10px;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tags span {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 6px 10px;
+  color: #26364f;
+  font-size: 14px;
+}
+
+.pub,
+.project {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 16px 18px;
+  margin-bottom: 14px;
+}
+
+.authors,
+.venue,
+.status,
+.muted {
+  color: var(--muted);
+}
+
+.venue {
+  font-weight: 600;
+}
+
+.status {
+  font-size: 14px;
+}
+
+ul {
+  margin: 8px 0 0;
+  padding-left: 20px;
+}
+
+.edu p {
+  margin-bottom: 6px;
+}
+
+@media (max-width: 720px) {
+  .page {
+    width: min(100% - 28px, 980px);
+    padding-top: 28px;
+  }
+
+  .hero {
+    display: block;
+  }
+
+  h1 {
+    font-size: 34px;
+  }
+
+  .links {
+    justify-content: flex-start;
+    margin-top: 18px;
+  }
+}
